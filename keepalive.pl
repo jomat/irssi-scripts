@@ -43,7 +43,7 @@ $VERSION = '20140609';
 sub keepalive_message_self {
 	foreach my $server (Irssi::servers()) {
 		my $nick = $server->{nick};
-		$server->command("PING a");
+		$server->send_raw("PING a");
 	}
 }
 
